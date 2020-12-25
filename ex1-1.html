@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <h2>연습문제 1-1</h2>
+    두 수를 입력받아 4칙연산의 결과를 표시해 봅시다.
     <script>
-        var s1 = prompt("첫번째 숫자를 입력해주세요.");
+        var s1 = prompt("첫번째 숫자를 입력해주세요.");  //팝업창으로 input을 받는다.
         var s2 = prompt("두번째 숫자를 입력해주세요.");
-        var n1 = Number(s1);
+        var n1 = Number(s1);  //문자열을 숫자로 바꾼다.
         var n2 = Number(s2);
-        console.log(n1 + "+" + n2 + "=" + (n1+n2));
+        console.log(n1 + "+" + n2 + "=" + (n1+n2));  //콘솔에 입력한다.
         console.log(n1 + "-" + n2 + "=" + (n1-n2));
         console.log(n1 + "*" + n2 + "=" + (n1*n2));
-        console.log(n1 + "/" + n2 + "=" + (n1/n2));
+        console.log(n1 + "/" + n2 + "=" + (n1/n2));  //나누기 연산자는 "/". 나머지를 나타내는 연산자는 "%"
     </script>
-    <!-- <script src = "./ex1-1.js"></script> -->
 </body>
 </html>
