@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>반복문 예제1-2</h2>
+    사용자가 입력한 수들의 갯수와 합을 구하는 프로그램을 작성해 봅시다. <strong>(단, 0을 입력받으면 입력 종료)</strong><br/>
+    <script>
+        var no = -1,  //컴퓨터는 숫자를 셀 때 1이 아닌 0부터 세기 때문이다.
+            sum = 0,
+            n = 100;  //while문의 조건문 때문에, 0이 아닌 아무런 수를 변수로 설정해둔다.
+
+        while(n != 0){
+            n = Number(prompt("숫자를 입력하고 확인을 눌러주세요. 0을 입력시 종료됩니다."));
+            no++;
+            sum += n;
+            console.log(no, n, sum);
+            
+        }
+        alert("입력하신 " + no + "개의 수의 합은 " + sum +"입니다.");
+        document.write("결과 : 입력하신 " + no + "개의 수의 합은 " + sum +"입니다.")
+        console.log("입력하신 " + no + "개의 수의 합은 " + sum +"입니다.");
+    </script>
+</body>
+</html>

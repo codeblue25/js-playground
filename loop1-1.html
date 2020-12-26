@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>반복문 예제1-1</h2>
+    while문과 for문을 사용해서 1에서 100까지의 합을 구해 봅시다.
+    <script>
+        //while문
+        var sum = 0;
+        var n = 1;
+        while(n <= 100){
+            console.log(n, sum+=n);
+            n++;
+        }
+        console.log("1부터 100까지의 합은 " + sum + "입니다.");
+
+        //for문
+        for(var sum = 0, n = 1; n<=100; n++){
+           console.log(n, sum+=n);
+        }
+        console.log("1부터 100까지의 합은 " + sum + "입니다.");
+    </script>
+</body>
+</html>
