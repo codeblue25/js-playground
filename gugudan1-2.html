@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>요구사항</h2>
+    * 구구단에서 4단과 5단을 계산한 결과 값을 변수에 저장한 후 저장한 변수 값을 출력한다.<br />
+    * 4와 5는 결정하면 바뀌지 않는 값이다. 따라서 4단과 5단에 해당하는 상수 값으로 만든 후 프로그램을 구현한다.<br />
+    * 예를 들어 4단은 4 곱하기 1 계산 결과 값을 i라는 변수에 저장하고, i라는 변수에 저장한 결과 값을 출력한다.<br />
+    * 사용자가 입력한 숫자 값에 해당하는 단을 출력한다(예를 들어 사용자가 4를 입력하면 4단 전체를 계산해 출력)<br />
+    * 결과값을 콘솔과 html에 출력한다.<br />
+    <br />
+
+    <script>
+        var x = prompt("출력 하고 싶은 단을 입력하세요.");
+        var X = Number(x);
+            //콘솔에 출력
+            console.log(X + "단");
+            console.log(X + " * 1 = " + X*1);
+            console.log(X + " * 2 = " + X*2);
+            console.log(X + " * 3 = " + X*3);
+            console.log(X + " * 4 = " + X*4);
+            console.log(X + " * 5 = " + X*5);
+            console.log(X + " * 6 = " + X*6);
+            console.log(X + " * 7 = " + X*7);
+            console.log(X + " * 8 = " + X*8);
+            console.log(X + " * 9 = " + X*9);
+    
+            //html에 출력
+            document.write("<h3>" + X + "단</h3>");
+            document.write(X + " * 1 = " + X*1 + "<br />");
+            document.write(X + " * 2 = " + X*2 + "<br />");
+            document.write(X + " * 3 = " + X*3 + "<br />");
+            document.write(X + " * 4 = " + X*4 + "<br />");
+            document.write(X + " * 5 = " + X*5 + "<br />");
+            document.write(X + " * 6 = " + X*6 + "<br />");
+            document.write(X + " * 7 = " + X*7 + "<br />");
+            document.write(X + " * 8 = " + X*8 + "<br />");
+            document.write(X + " * 9 = " + X*9 + "<br />");
+    </script>
+</body>
+</html>
