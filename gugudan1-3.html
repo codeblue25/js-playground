@@ -8,14 +8,17 @@
     <h2>요구사항</h2>
     * 지금까지 2 ~ 5단까지 구현하기 위해 단순, 반복적인 작업이 많았다.<br />
     * 이 같은 단순, 반복적인 작업을 변수와 반복문을 활용해 제거하면서 6단과 7단을 구현한다.<br />
+    * 결과값을 콘솔과 html에 출력한다.<br />
     <br />
 
     <script>
         var x = prompt("출력 하고 싶은 단을 입력하세요.");
         var X = Number(x);
         document.write("<h3>" + X + "단</h3>");
+        console.log(X + "단");
         for(var Z = 1; Z < 10; Z++){
             document.write(X + " * " + Z + " = " + X*Z + "<br />");
+            console.log(X + " * " + Z + " = " + X*Z);
         }
     </script>
 </body>
