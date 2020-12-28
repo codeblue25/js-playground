@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2>제어문 연습문제</h2>
+    사용자가 입력한 숫자가 소수인지 아닌지 알려주는 프로그램을 작성해 봅시다. <br />
+    <br />
+
+    <script>
+        var n = Number(prompt("숫자를 입력하세요.")),
+        x = 2;
+
+        for(var s = n/x; x<=n; x++){
+            if(Number.isInteger(s) === true){
+                document.write("입력하신 숫자 " + n + " : 소수가 아닙니다.<br />");
+                break;
+            }else{
+                document.write("입력하신 숫자 " + n + " : 소수입니다.<br />");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
