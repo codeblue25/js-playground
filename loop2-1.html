@@ -11,16 +11,19 @@
 
     <script>
         var n = Number(prompt("숫자를 입력하세요.")),
-        x = 2;
+            isPrime = true;
 
-        for(var s = n/x; x<=n; x++){
-            if(Number.isInteger(s) === true){
-                document.write("입력하신 숫자 " + n + " : 소수가 아닙니다.<br />");
-                break;
-            }else{
-                document.write("입력하신 숫자 " + n + " : 소수입니다.<br />");
+        for(var x = 2; x<n; x++){
+            if(n % x === 0){
+                isPrime = false;
                 break;
             }
+        }
+            
+        if(isPrime){
+            document.write("입력하신 숫자 " + n + " : 소수입니다.<br />");
+        }else{
+            document.write("입력하신 숫자 " + n + " : 소수가 아닙니다.<br />");
         }
     </script>
 </body>
