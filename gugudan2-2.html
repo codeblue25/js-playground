@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>함수를 이용한 구구단 구현하기</h1>
+    <h2>요구사항</h2>
+    * 함수를 활용해 반복적으로 발생하는 코드를 줄인다.<br />
+    * 공부를 위해 메인함수를 사용해 본다.<br />
+    <br />
+    <script>
+        function gugudan(x){
+            var result = [];
+            for(var i = 1; i <= 9; i++){
+                result[i] = x * i;
+            }
+            return result;
+        }
+        
+        function print(x, result){
+            document.write("<h4>" + x + "단</h4>");
+            for(var i = 1; i <= 9; i++){
+                var r = x * i;
+                document.write(x + " X " + i + " = " + r + "<br />");
+            }
+        }
+
+        function main(){
+            console.log("메인함수가 실행되었습니다.");
+            for(var n = 2; n <= 9; n++){
+                var RESULTS = gugudan(n);
+                print(n, RESULTS);
+            }
+        }
+
+        main();
+    </script>
+</body>
+</html>
