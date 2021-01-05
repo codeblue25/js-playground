@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  1. 함수 이름: power<br />
+    * 매개 변수를 하나 넣으면 제곱해 준다(예 : power(2) = 4).<br />
+    * 매개 변수를 2개 넣으면 <첫 번째 매개 변수>의 <두 번째 매개 변수> 제곱만큼 해 준다(예 : power(2, 3) = 8).<br />
+    <br />
+  2. 함수 이름: multiply<br />
+    * 매개 변수로 넣은 값을 모두 곱해준다(예 : multiply(1, 2, 3, 4, 5) = 120).<br />
+    <br />
+    <br />
+
+  <script>
+    function power(num1, num2 = 2){
+      document.write("power(" + num1 + ", " + num2 + ") = " + num1 + "^" + num2 + " = " + num1**num2 + "<br / >");
+      return num1**num2;   
+    }
+    
+    
+    function multiply(){
+      var result = 1;
+      for(var i = 0; i < arguments.length; i++){
+        result *= arguments[i];
+      }
+      return result;
+    }
+
+    console.log(power(2));
+    console.log(power(2, 3));
+    console.log(multiply(1, 2, 3, 4, 5));
+  </script>
+
+</body>
+</html>
