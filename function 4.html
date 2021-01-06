@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <h1>Quiz</h1>
+  calculate(command, a, b) 함수를 만든다.<br />
+  command : add, substract, multiply, divide, remainder<br /><br />
+  <strong><i>포기하지 말고 내 힘으로 만들기!</i></strong>
+    
+
+  <script>
+
+    // 내가 짠 함수
+
+    function calculate(command, a, b){
+      switch(command){
+        case "add" :
+          console.log(a + b);
+          break;
+        case "substract" :
+          console.log(a - b);
+          break;
+        case "multiply" :
+          console.log(a * b);
+          break;
+        case "divide" :
+          console.log(a / b);
+          break;
+        case "remainder" :
+          console.log(a % b);
+          break;
+        default : 
+          console.log("잘못된 연산입니다.");
+          break;
+      }
+    }
+
+    calculate("add", 2, 3);
+    calculate("multiply", 2, 3);
+    calculate("substract", 100, 70);
+    calculate("divide", 10, 5);
+    calculate("remainder", 90, 9);
+    calculate("boom", 1, 4);
+
+
+      //정답 함수
+      //return을 씀으로서, 조건문을 간결하게 끝낼 수 있다.
+
+    // function calculate(command, a, b){
+    //   switch(command){
+    //     case "add":
+    //       return a + b;
+    //     case "substract":
+    //      return a - b;
+    //     case "multiply":
+    //      return a * b;
+    //     case "divide":
+    //      return a / b;
+    //     case "remainder":
+    //      return a % b;
+    //     default: 
+    //      throw Error("잘못된 연산입니다.");
+    //   }
+    // }
+
+    // console.log(calculate("add", 2, 3));
+    // console.log(calculate("multiply", 2, 3));
+  </script>
+
+</body>
+</html>
