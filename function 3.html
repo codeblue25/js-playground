@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <h1>함수 포기하지마2</h1>
+    <br />
+
+  <script>
+  "use strict";
+    //배열로 함수 출력
+    //for 반복문
+  function printAll(...args){
+    for(let i = 0; i < args.length; i++){
+      console.log(args[i]);
+    }
+  
+    //for..of 문법
+    for(const arg of args){
+      console.log(arg);
+    }
+
+    //forEach 함수형 언어 + Arrow function(블럭과 return을 안써도 됨)
+    args.forEach((arg) => console.log(arg));
+  }
+  printAll("포기하지마", "너는 할수있다.");
+
+
+
+    //callback function
+  function randomQuiz(answer, printYes, printNo){
+    if(answer === "You can do it"){
+      printYes();
+    }else{
+      printNo();
+    }
+  }
+  //annoymous function
+  const printYes = function(){
+    console.log("Yes!");
+  }
+  //named function -> 디버깅할때 유용
+  const printNo = function no(){
+    console.log("No!");
+  }
+
+  randomQuiz("give up", printYes, printNo);
+  randomQuiz("You can do it", printYes, printNo);
+
+
+
+  //Arrow function로 간단하게 한 줄로 함수를 쓸 수 있다.
+  const add = function(a, b){
+    return a + b;
+  }
+  //위와 같은 코드이지만 더 간결하다.
+  const add = (a, b) => a + b;
+  //Arrow function에서 더 긴 코드를 쓰는 것도 가능하다.
+  const add = (a, b) => {
+    return a + b;
+  }
+
+
+
+  //Immediately Invoked Function Expression : 함수를 선언함과 동시에 호출하는 방법
+  function hello(){
+    console.log("hello IIFE");
+  }
+  hello();
+  //이렇게 따로 호출할 필요 없이 (함수)();로 바로 호출할 수 있다.
+  (function hello(){
+    console.log("hello IIFE");
+  })();
+  </script>
+
+</body>
+</html>
