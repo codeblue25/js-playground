@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>객체를 이용한 구구단 구현하기</h1>
+    <h2>요구사항</h2>
+    * main() 메소드는 프로그램을 시작하는 역할을 한다.<br />
+    * 함수를 구구단 객체의 메소드로 변경한다.<br />
+    <br />
+    <script>
+        var gugudan = {};  //객체 생성
+
+        gugudan.calculate = function(x){
+            this.result = [];
+            this.current = x;
+            for(var i = 1; i <= 9; i++){
+                this.result[i] = x * i;
+            }
+        }
+
+        gugudan.print = function(x, result){
+            document.write("<h4>" + x + "단</h4>");
+            for(var i = 1; i <= 9; i++){
+                document.write(this.current + " X " + i + " = " + this.result[i] + "<br />");
+            }
+        }
+         console.log(gugudan);
+
+        gugudan.main = function(){  
+            for(var n = 2; n <= 9; n++){
+                var RESULTS = this.calculate(n);
+                this.print(n, RESULTS);
+            }
+        }
+
+        gugudan.main();
+    </script>
+</body>
+</html>
