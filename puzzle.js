@@ -11,6 +11,9 @@ const puzzle = {
 puzzle.textArr = ["HELLO", "JAVASCRIPT", "BIBIMNOODLE", "CHILL", "PRIVATE", "OMEGATHREE", "KEYBOARD", "FEBUARY", "STRAWBERRY", "CODEBLUE"];
 //puzzle 객체 생성
 
+puzzle.start = Date.now();
+//puzzle 시작 시간 기록
+
 puzzle.choose = function(){
     const index = Math.floor(Math.random() * this.textArr.length);
     this.answer = this.textArr[index];
@@ -51,7 +54,8 @@ puzzle.showResult = function(){
         result.innerHTML = "현재 점수 : " + score;
     }
     if(this.current === this.maxPlay){
-        alert("5개를 모두 맞췄습니다!");
+        const finish = (Date.now() - this.start) / 1000;
+        alert("당신의 기록은 " + finish + "초 입니다.");
         return;
     }
 };
@@ -131,9 +135,10 @@ puzzle.shuffle = function(){
     if(toggle1){
         reversing();
     }
-    const toggle2 = Math.floor(Math.random() * this.letters.length);
+    const rmax = Math.max(this.answer.length - 2, 1);
+    const toggle2 = Math.floor(Math.random() * rmax) + 1;
     for(let i = 0; i < toggle2; i++){
-        leftPush();
+        rightPush();
     }
 };
 puzzle.shuffle();
